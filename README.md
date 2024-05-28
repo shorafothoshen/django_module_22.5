@@ -1,0 +1,3 @@
+If you want to run this project, you must download tailwind css. You can download by following the link below......
+
+bolg Link: https://django-tailwind.readthedocs.io/en/latest/installation.html

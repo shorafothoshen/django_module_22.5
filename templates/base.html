@@ -1,0 +1,24 @@
+{% load static %}
+{% load static tailwind_tags %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block head_title %}{% endblock %}</title>
+    {% comment %} <link href="https://unpkg.com/tailwindcss@2.0.1/dist/tailwind.min.css" rel="stylesheet"> {% endcomment %}
+    {% tailwind_css %}
+</head>
+<body>
+    {% include "navbar.html" %}
+    <div>
+        {% block body %}
+        <div class="lg:container lg:mx-auto" id="main">
+            {% include 'messages.html' %}
+            {% block content %}
+            {% endblock %}
+        </div>
+        {% endblock body %}
+    </div>
+</body>
+</html>
